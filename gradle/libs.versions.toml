@@ -1,0 +1,60 @@
+[versions]
+agp = "8.8.0"
+kotlin = "1.9.25"
+coreKtx = "1.15.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+lifecycleRuntimeKtx = "2.8.7"
+hilt = "2.47"
+coroutines = "1.7.3"
+navigationCompose = "2.8.5"
+retrofit = "2.9.0"
+okhttp = "4.10.0"
+hiltNavigationCompose = "1.2.0"
+compose = "1.7.6"
+compose_compiler = "1.5.15"
+material3 = "1.0.1"
+coil = "3.0.4"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-tooling = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+compose-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "compose" }
+# Compose Compiler for Kotlin
+compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "compose_compiler" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
+
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlin-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlin-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+okhttp-logging = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
+coil = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
+coil-network = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coil" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+
+[bundles]
+kotlin = ["kotlin-stdlib", "kotlin-coroutines-core", "kotlin-coroutines-android"]
+retrofit = ["retrofit", "retrofit-converter-gson", "okhttp", "okhttp-logging"]
+hilt = ["hilt-android", "hilt-navigation-compose"]
+compose = ["compose-ui", "compose-tooling", "compose-runtime", "compose-compiler", "compose-material3"]
+coil = ["coil", "coil-network"]
